@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>FlyTripVisa — Your Journey Begins Here</title>
     <link rel="stylesheet" href="src/styles/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,7 @@
 
             <nav class="nav" id="mainNav">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="/" class="nav__link nav__link--active">Home</a></li>
+                    <li class="nav__item"><a href="/" class="nav__link nav__link--active" id="homeLink">Home</a></li>
                     <li class="nav__item dropdown">
                         <a href="#" class="nav__link dropdown__trigger">Services</a>
                         <ul class="dropdown__menu">
@@ -27,7 +27,7 @@
                             <li><a href="/flights" class="dropdown__link">Flights</a></li>
                             <li><a href="/hotels" class="dropdown__link">Hotels</a></li>
                             <li><a href="/travel-insurance" class="dropdown__link">Travel Insurance</a></li>
-                            <li><a href="/ai-chat" class="dropdown__link">AI Travel Assistant</a></li>
+                            <li><a href="#" class="dropdown__link" id="navAiChat">AI Travel Assistant</a></li>
                         </ul>
                     </li>
                     <li class="nav__item"><a href="/destinations" class="nav__link">Destinations</a></li>
@@ -134,7 +134,7 @@
                     <h2 class="banner__title">Need Help Planning Your Trip?</h2>
                     <p class="banner__text">Our AI travel assistant can help you find the best flights, hotels, and visa information.</p>
                     <div class="banner__actions">
-                        <a href="/ai-chat" class="btn btn--secondary banner__btn">
+                        <a href="#" class="btn btn--secondary banner__btn" id="bannerAiChat">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
                             </svg>
@@ -149,26 +149,33 @@
             </div>
         </section>
 
-        <!-- ===== AI CHAT PAGE (hidden by default) ===== -->
+        <!-- ===== AI CHAT PAGE ===== -->
         <section class="chat-page" id="chatPage" style="display:none;">
             <div class="container">
                 <div class="chat-page__header">
+                    <button class="chat-page__back" id="chatBackBtn" aria-label="Back to home">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="19" y1="12" x2="5" y2="12"/>
+                            <polyline points="12 19 5 12 12 5"/>
+                        </svg>
+                        Back
+                    </button>
                     <h2 class="chat-page__title">AI Travel Assistant</h2>
                     <p class="chat-page__subtitle">Ask me about visas, flights, hotels, and travel planning</p>
                 </div>
                 <div class="chat-container" id="chatContainer">
                     <div class="chat-messages" id="chatMessages">
-                        <!-- Messages will be rendered by chat.js -->
+                        <!-- Messages rendered by chat.js -->
                     </div>
                     <div class="chat-input-area">
                         <div class="chat-input-wrapper">
-                            <input
-                                type="text"
+                            <textarea
                                 class="chat-input"
                                 id="chatInput"
                                 placeholder="Type your travel question..."
+                                rows="1"
                                 autocomplete="off"
-                            >
+                            ></textarea>
                             <button class="chat-voice-btn" id="chatVoiceBtn" aria-label="Voice input">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
@@ -220,7 +227,7 @@
                         <li><a href="/flights" class="footer__link">Flights</a></li>
                         <li><a href="/hotels" class="footer__link">Hotels</a></li>
                         <li><a href="/destinations" class="footer__link">Destinations</a></li>
-                        <li><a href="/ai-chat" class="footer__link">AI Travel Assistant</a></li>
+                        <li><a href="#" class="footer__link" id="footerAiChat">AI Travel Assistant</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
