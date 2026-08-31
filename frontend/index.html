@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlyTripVisa</title>
+    <title>FlyTripVisa — Your Journey Begins Here</title>
     <link rel="stylesheet" href="src/styles/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
+    <!-- ===== HEADER ===== -->
     <header class="header">
         <div class="container header__inner">
             <a href="/" class="logo">
@@ -52,25 +52,26 @@
         </div>
     </header>
 
-    <!-- Main Content Area -->
+    <!-- ===== MAIN CONTENT ===== -->
     <main id="mainContent">
-        <!-- Hero Section (shown by default) -->
+
+        <!-- ===== HOMEPAGE HERO SECTION ===== -->
         <section class="hero" id="homepageHero">
             <div class="container hero__inner">
                 <div class="hero__content">
                     <h1 class="hero__title">Your Journey Begins Here</h1>
                     <p class="hero__subtitle">Fast visa processing, flight bookings, and travel assistance worldwide.</p>
-                    
+
                     <div class="hero__search" id="heroSearch">
                         <div class="search-bar">
                             <svg class="search-bar__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <circle cx="11" cy="11" r="8"/>
                                 <line x1="21" y1="21" x2="16.65" y2="16.65"/>
                             </svg>
-                            <input 
-                                type="text" 
-                                class="search-bar__input" 
-                                id="searchInput" 
+                            <input
+                                type="text"
+                                class="search-bar__input"
+                                id="searchInput"
                                 placeholder="Search destinations, visas, flights..."
                                 autocomplete="off"
                             >
@@ -82,7 +83,7 @@
                                     <line x1="8" y1="23" x2="16" y2="23"/>
                                 </svg>
                             </button>
-                            <button class="search-bar__send" id="sendBtn" aria-label="Send to AI">
+                            <button class="search-bar__send" id="sendBtn" aria-label="Send to AI Assistant">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <line x1="22" y1="2" x2="11" y2="13"/>
                                     <polygon points="22 2 15 22 11 13 2 9 22 2"/>
@@ -113,7 +114,7 @@
             </div>
         </section>
 
-        <!-- Visa Cards Section -->
+        <!-- ===== VISA CARDS SECTION ===== -->
         <section class="visa-cards" id="visaCardsSection">
             <div class="container">
                 <div class="section-header">
@@ -126,7 +127,7 @@
             </div>
         </section>
 
-        <!-- Banner Section -->
+        <!-- ===== BANNER SECTION ===== -->
         <section class="banner">
             <div class="container banner__inner">
                 <div class="banner__content">
@@ -148,7 +149,7 @@
             </div>
         </section>
 
-        <!-- AI Chat Page (hidden by default) -->
+        <!-- ===== AI CHAT PAGE (hidden by default) ===== -->
         <section class="chat-page" id="chatPage" style="display:none;">
             <div class="container">
                 <div class="chat-page__header">
@@ -157,14 +158,14 @@
                 </div>
                 <div class="chat-container" id="chatContainer">
                     <div class="chat-messages" id="chatMessages">
-                        <!-- Messages will be inserted here -->
+                        <!-- Messages will be rendered by chat.js -->
                     </div>
                     <div class="chat-input-area">
                         <div class="chat-input-wrapper">
-                            <input 
-                                type="text" 
-                                class="chat-input" 
-                                id="chatInput" 
+                            <input
+                                type="text"
+                                class="chat-input"
+                                id="chatInput"
                                 placeholder="Type your travel question..."
                                 autocomplete="off"
                             >
@@ -187,9 +188,10 @@
                 </div>
             </div>
         </section>
+
     </main>
 
-    <!-- Footer -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container footer__inner">
             <div class="footer__grid">
