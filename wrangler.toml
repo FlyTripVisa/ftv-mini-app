@@ -1,1 +1,28 @@
-deploy
+name = "ftv-mini-app"
+main = "src/index.ts"
+compatibility_date = "2026-08-30"
+compatibility_flags = ["nodejs_compat"]
+
+# Static assets — serves the chat UI
+[assets]
+directory = "public"
+binding = "ASSETS"
+
+# Durable Objects for real-time chat & AI agents
+[[durable_objects.bindings]]
+name = "AIAgent"
+class_name = "AIAgent"
+
+[[durable_objects.bindings]]
+name = "ChatSession"
+class_name = "ChatSession"
+
+[[durable_objects.bindings]]
+name = "RealtimeStream"
+class_name = "RealtimeStream"
+
+# Durable Object exports (SQLite storage)
+[exports]
+# ... hmm, the exports format in TOML
+
+# Actually, let me check the TOML format for exports.
