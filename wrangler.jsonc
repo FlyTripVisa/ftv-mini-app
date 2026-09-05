@@ -1,0 +1,13 @@
+{
+  "name": "ftv-mini-app",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-05",
+  "ai": { "binding": "AI" },
+  "kv_namespaces": [
+    { "binding": "CHAT_KV", "id": "55384fd25e174d69ad17b3cb1b576ab7" }
+  ],
+  "routes": [
+    { "pattern": "mini.flytripvisa.site/*", "zone_name": "mini.flytripvisa.site" },
+    { "pattern": "mini.flytripvisa.site/*", "zone_name": "mini.flytripvisa.site" }
+  ]
+}
