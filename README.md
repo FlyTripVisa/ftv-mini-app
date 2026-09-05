@@ -1,4 +1,4 @@
-# ftv-mini-app
+# FTV-MINI-APP AI 👽 CHAT
 
 ftv-mini-app/
 ├── wrangler.toml
